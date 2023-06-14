@@ -10,7 +10,7 @@ class Square extends shape {
 	constructor(size) {
 		super(size, size);
 	}
-};
+}
 
 module.exports = Square;
 
