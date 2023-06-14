@@ -8,4 +8,4 @@ exports.esrever = (list) =>{
 		array.push(current);
 		return array;
 	}, r);
-};
+}
