@@ -4,7 +4,7 @@ Script sends a request to the URL and
 displays the value of the X-Request-Id variable
 """
 import urllib.request
-from sys import argv
+import sys
 
 
 def main(argv):
@@ -14,4 +14,4 @@ def main(argv):
         print(headers['X-Request-Id'])
 
 if __name__ == "__main__":
-    main(argv[1])
+    main(sys.argv[1])
