@@ -7,7 +7,6 @@ import sys
 
 
 def main(argv):
-
     """
     Function takes url and sends request to url
     """
