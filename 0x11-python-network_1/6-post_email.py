@@ -9,6 +9,10 @@ import sys
 
 def main(argv):
 
+    """
+    Function that send request
+    """
+
     mail = {'email': argv[2]}
     site = argv[1]
     res = requests.post(site, data=mail)

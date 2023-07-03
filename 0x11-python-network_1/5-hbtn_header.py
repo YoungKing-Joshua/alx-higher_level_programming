@@ -8,6 +8,11 @@ import sys
 
 
 def main(argv):
+
+    """
+    Function takes url and sends request to url
+    """
+
     site = argv[1]
     res = requests.get(site)
     header = res.headers.get('X-Request-Id')
