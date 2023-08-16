@@ -8,6 +8,9 @@ from requests.auth import HTTPBasicAuth
 
 
 def main(argv):
+    """
+    Function takes github credentials and uses github API
+    """
 
     user = argv[1]
     password = argv[2]

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Script contains a module to access to the 
-GitHub API and uses the information
+Script contains a module to access to the GitHub API and uses the information
 """
 import requests
 import sys
@@ -9,6 +8,10 @@ from requests.auth import HTTPBasicAuth
 
 
 def main(argv):
+
+    """
+    Funtion to commit list 10
+    """
 
     def print_commits(i, commit_list):
 
