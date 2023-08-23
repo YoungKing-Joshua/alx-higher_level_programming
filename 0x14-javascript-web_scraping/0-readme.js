@@ -4,6 +4,6 @@ const fs = require('fs');
 
 const path = process.argv[2];
 
-fs.readFile(path , 'utf8', function (err, content) {
+fs.readFile(path, 'utf8', function (err, content) {
   console.log(err || content);
 });

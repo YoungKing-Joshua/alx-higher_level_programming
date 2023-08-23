@@ -5,7 +5,6 @@ const request = require('request');
 const movieEp = process.argv[2];
 const pathU = 'https://swapi-api.hbtn.io/api/films/';
 
-
 request(pathU + movieEp, function (error, response, body) {
   if (!error) {
     const charc = JSON.parse(body).characters;

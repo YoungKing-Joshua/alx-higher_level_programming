@@ -4,7 +4,7 @@ const request = require('request');
 const movieEp = process.argv[2];
 const pathU = 'https://swapi-api.hbtn.io/api/films/';
 
-request.get(pathU + movieEp, function (error, res, body){
+request.get(pathU + movieEp, function (error, res, body) {
   if (error) {
     console.log(error);
   }
