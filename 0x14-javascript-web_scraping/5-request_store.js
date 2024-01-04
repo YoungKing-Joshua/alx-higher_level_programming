@@ -1,16 +1,20 @@
 #!/usr/bin/node
-/* Stores the contents of a webpage in a file */
+// Js script that gets the contents of webpage
 
-const request = require('request');
+const req = require('request');
 const fs = require('fs');
-const url = process.argv[2];
-const filename = process.argv[3];
 
-request(url, (err, response, body) => {
-  if (err) console.log(err);
-  else {
-    fs.writeFile(filename, body, 'utf8', (err) => {
-      if (err) console.log(err);
+const inirl = process.argv[2];
+const filep = process.argv[3];
+
+req(inirl, (error, res, body) => {
+  if (error) {
+    console.log(error);
+  } else {
+    fs.writeFile(filep, body, 'utf8', (error) => {
+      if (error) {
+        console.log(error);
+      }
     });
   }
 });

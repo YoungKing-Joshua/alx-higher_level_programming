@@ -1,23 +1,22 @@
 #!/usr/bin/node
-/* Display the number of movie the character
-Wedge Antilles is present */
+// Js script that prints the number of movies
 
-const request = require('request');
+const req = require('request');
 const apiUrl = process.argv[2];
 
-request(apiUrl, (err, response, body) => {
-  if (err) console.log(err);
+req(apiUrl, (error, res, body) => {
+  if (error) console.log(error);
   else {
-    let count = 0;
-    const results = JSON.parse(body).results;
-    for (let i = 0; i < results.length; i++) {
-      const characters = results[i].characters;
-      for (let j = 0; j < characters.length; j++) {
-        if (characters[j].search('18') > 0) {
-          count++;
+    let n = 0;
+    const urc = JSON.parse(body).results;
+    for (let i = 0; i < urc.length; i++) {
+      const mC = urc[i].characters;
+      for (let j = 0; j < mC.length; j++) {
+        if (mC[j].search('18') > 0) {
+          n++;
         }
       }
     }
-    console.log(count);
+    console.log(n);
   }
 });
