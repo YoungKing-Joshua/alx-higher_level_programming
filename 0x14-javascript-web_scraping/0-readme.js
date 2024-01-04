@@ -6,8 +6,8 @@ const filep = process.argv[2];
 
 fs.readFile(filep, 'utf8', (error, data) => {
   if (error) {
-	  console.log(error);
-  } else { 
-	  console.log(data.toString());
+    console.log(error);
+  } else {
+    console.log(data.toString());
   }
 });

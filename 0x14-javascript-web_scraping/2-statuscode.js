@@ -6,8 +6,8 @@ const link = process.argv[2];
 
 req(link, (error, res) => {
   if (error) {
-	  console.log(error);
+    console.log(error);
   } else {
-	  console.log(`code: ${res.statusCode}`);
+    console.log(`code: ${res.statusCode}`);
   }
 });

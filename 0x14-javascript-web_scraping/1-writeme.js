@@ -8,8 +8,8 @@ const ctext = process.argv[3];
 
 fs.writeFile(filep, ctext, 'utf8', (error) => {
   if (error) {
-	  console.log(error);
+    console.log(error);
   } else {
-	  console.log(`Successfully written to ${filep}`);
+    console.log(`Successfully written to ${filep}`);
   }
 });
