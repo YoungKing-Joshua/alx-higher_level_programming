@@ -1,22 +1,25 @@
 #!/usr/bin/node
-/* Print all characters of Star wars api
-in right order */
-const request = require('request');
-const url = `https://swapi-api.hbtn.io/api/films/${process.argv[2]}/`;
+// Js script that prints all characters of a Star Wars
 
-request(url, (err, res, body) => {
-  if (err) console.log(err);
-  const index = 0;
-  const characters = JSON.parse(body).characters;
-  printCharcter(characters, index);
+const req = require('request');
+const inirl = `https://swapi-api.hbtn.io/api/films/${process.argv[2]}/`;
+
+req(inirl, (error, res, body) => {
+  if (error) console.log(error);
+  const urs = JSON.parse(body).characters;
+  getC(urs, 0);
 });
 
-const printCharcter = function (url, i) {
-  request(url[i], (err, res, body) => {
-    if (err) console.log(err);
-    console.log(JSON.parse(body).name);
-    if (++i < url.length) {
-      printCharcter(url, i++);
+// Ensure character names are printed
+const getC = function (inirl, j) {
+  req(inirl[j], (error, res, body) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(JSON.parse(body).name);
+      if (++j < inirl.length) {
+        getC(inirl, j);
+      }
     }
   });
 };
