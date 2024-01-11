@@ -1,8 +1,8 @@
 $(function () {
-  $("DIV#red_header").click(function () {
-    $("header").addClass("red");
+  $('DIV#red_header').click(function () {
+    $('header').addClass('red');
   });
 });
 
-//OR
-//$('div#red_header').addClass('red');
+// OR
+// $('div#red_header').addClass('red');
